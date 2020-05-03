@@ -153,9 +153,19 @@ while($r=mysqli_fetch_assoc($result))
   $size=$r['Size'];
   $ProductID=$r['ProductID'];
   if($ProductID==101)
-  $link='product1.php';
+{ $link='product1.php';
+  $color1='Yellow';
+   $color2='Navy_Blue';
+   $color3='Black';
+   $color4='Red';
+}
   else
-  $link='product2.php';
+ { $link='product2.php';
+ $color1='Black';
+   $color2='Navy_Blue';
+   $color3='Black_Foil';
+   $color4='Red';
+ }
    
 echo "<tr><td>".$r['S_no']."</td><td>".$r['ProductID']."</td><td>"."
    <form method='post' action='edit.php'>
@@ -182,10 +192,10 @@ echo "<tr><td>".$r['S_no']."</td><td>".$r['ProductID']."</td><td>"."
   	   <label for='Color'>Color:</label>
   <select id='Color' name='Color'  >
    <option selected='selected'>$color</option>
-    <option value='Black'>Black</option>
-    <option value='Navy Blue'>Navy Blue</option>
-    <option value='Dark Green'>Dark Green</option>
-    <option value='Red'>Red</option>
+    <option value=$color1>$color1</option>
+    <option value=$color2>$color2</option>
+    <option value=$color3>$color3</option>
+    <option value=$color4>$color4</option>
   </select>
   	</div>"."</td><td>"."<a href='$link'>See Details</a>"."</td><td>"."<form method='post' action='cart.php'>	<input type='hidden' value='$S_no' name='S_no'  >	<div class='input-group'>
   	  <button type='submit' class='btn' name='save'>save</button>
