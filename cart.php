@@ -197,6 +197,7 @@ echo "<tr><td>".$r['S_no']."</td><td>".$r['ProductID']."</td><td>"."
 <form method='post' action='cart.php'>	<input type='hidden' value='$S_no' name='S_no'  >	<div class='input-group'>
   	  <button type='submit' class='btn' name='buynow'>BUY NOW</button>
   	   <button type='button'  onclick="document.location = 'edit.php'">EDIT CART</button>
+        <button type='button'  onclick="document.location = 'index.php'">Continue Shopping</button>
   	</div></form>
 </div>
   </div>
